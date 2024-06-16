@@ -6,6 +6,7 @@ def validator_for_habit(value):
     """ Проверка на правильность заполнения полей привычки """
 
     time = timedelta(minutes=2)
+    days = timedelta(days=7)
 
     try:
         if value['habit_is_good']:
@@ -23,6 +24,12 @@ def validator_for_habit(value):
     try:
         if value['duration'] > time:
             raise ValidationError('Привычку можно выполнять не более 2 минут')
+    except KeyError:
+        pass
+
+    try:
+        if not 0 < value['period'] <= days:
+            raise ValidationError('Привычку можно выполнять не реже, чем 1 раз в 7 дней')
     except KeyError:
         pass
 
