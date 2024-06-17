@@ -36,3 +36,14 @@
 Реализованы эндпоинты для работы с фронтендом
 Создано приложение для работы с Telegram и рассылками напоминаний
 
+# Курсовая 8 Docker Compose
+# Cозданы отдельные контейнеры для следующих сервисов:
+Django,
+PostrgeSQL,
+Redis,
+Celery,
+Celery_beat.
+# Команды:
+Собрать образ командой docker-compose build Запустить контейнеры командой docker-compose up Либо docker-compose up -d --build
+
+

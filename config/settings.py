@@ -90,12 +90,12 @@ WSGI_APPLICATION = 'config.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': os.getenv('DATABASES_ENGINE'),
-        'NAME': os.getenv('DATABASES_NAME'),
-        'USER': os.getenv('DATABASES_USER'),
-        'HOST': os.getenv('DATABASES_HOST'),
-        'PORT': os.getenv('DATABASES_PORT'),
-        'PASSWORD': os.getenv('DATABASES_PASSWORD'),
+        'ENGINE': os.getenv('POSTGRES_ENGINE'),
+        'NAME': os.getenv('POSTGRES_DB'),
+        'USER': os.getenv('POSTGRES_USER'),
+        'HOST': 'db',
+        'PORT': '5432',
+        'PASSWORD': os.getenv('POSTGRES_PASSWORD'),
     }
 }
 
